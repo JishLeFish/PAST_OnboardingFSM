@@ -1,5 +1,8 @@
 import java.util.*;
+/*
+    TO RUN: 
 
+*/
 public class FiniteStateMachine
 {
     static Scanner sc = new Scanner(System.in);
@@ -10,7 +13,7 @@ public class FiniteStateMachine
         sc.close();
     }
 
-    public static String getUserInput(String prompt)
+    public static String getUserInput(String prompt) throws InputMismatchException
     {
         String input = "";
         try
@@ -43,8 +46,9 @@ public class FiniteStateMachine
         System.out.println("If no choice is made in 10 minutes, the System will enter Low Power mode.");
         
         
-        
+
         // add Switch statement for choice
+        // switch statement throws error and takes system to FAULT
         // add Timer somehow??
     }
 }
