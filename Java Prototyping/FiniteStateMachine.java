@@ -27,6 +27,6 @@ public class FiniteStateMachine
     public static void stateBoot()
     {
         System.out.println("The System is booting.");
-
+        
     }
 }
