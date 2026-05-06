@@ -6,6 +6,7 @@ public class FiniteStateMachine
     public static void main(String[] args)
     {
         stateBoot();
+        sc.close();
     }
 
     public static String getUserInput(String prompt)
