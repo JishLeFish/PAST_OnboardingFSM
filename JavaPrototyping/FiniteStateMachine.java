@@ -1,7 +1,10 @@
 import java.util.*;
 /*
     TO RUN: 
-
+        cd JavaPrototyping
+        javac FiniteStateMachine.java
+        java FiniteStateMachine
+    Can not use run built into VSC because its in a folder
 */
 public class FiniteStateMachine
 {
