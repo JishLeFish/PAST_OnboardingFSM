@@ -10,7 +10,7 @@ public class FiniteStateMachine
 
     public static String getUserInput(String prompt)
     {
-        String input;
+        String input = "";
         try
         {
             System.out.println(prompt);
