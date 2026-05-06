@@ -27,6 +27,20 @@ public class FiniteStateMachine
     public static void stateBoot()
     {
         System.out.println("The System is booting.");
-        
+        stateIdle();        
+    }
+
+    public static void stateIdle()
+    {
+        System.out.println("The System is now in Idle.");
+
+        System.out.println("What do you want the System to do?");
+        System.out.println("    > Move to (L)OW_POWER and shut down subsystems.");
+        System.out.println("    > Move to (N)OMINAL and activate the Sensors and Payload.");
+        System.out.println("If no choice is made in 10 minutes, the System will enter Low Power mode.");
+
+
+
+
     }
 }
