@@ -1,5 +1,6 @@
 import java.util.*;
-public class FiniteStateMachine 
+
+public class FiniteStateMachine
 {
     static Scanner sc = new Scanner(System.in);
 
@@ -42,11 +43,8 @@ public class FiniteStateMachine
         System.out.println("If no choice is made in 10 minutes, the System will enter Low Power mode.");
         
         
+        
         // add Switch statement for choice
         // add Timer somehow??
-
-
-
-
     }
 }
