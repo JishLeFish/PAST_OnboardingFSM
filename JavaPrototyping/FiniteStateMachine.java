@@ -114,8 +114,6 @@ public class FiniteStateMachine
         wakeInput = getUserStringInput("");
         System.out.println("Bringing subsystems back online");
         stateIdle();
-
-        // call getUserInput to return system to stateIdle()
     }
 
     public static void stateNominal()
