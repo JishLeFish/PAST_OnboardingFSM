@@ -106,9 +106,15 @@ public class FiniteStateMachine
 
     public static void stateLowPower()
     {
+        String wakeInput = "";
         System.out.println("The System is now in Low Power");
         System.out.println("Shutting down subsystems");
         System.out.println("Looking for any input to wake back up");
+
+        wakeInput = getUserStringInput("");
+        System.out.println("Bringing subsystems back online");
+        stateIdle();
+
         // call getUserInput to return system to stateIdle()
     }
 
