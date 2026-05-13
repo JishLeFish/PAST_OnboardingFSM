@@ -77,6 +77,7 @@ public class FiniteStateMachine
                 default:
                     System.out.println("The User failed to input an option.");
                     stateFault();
+                    choiceMade = true;
                   break;
             }
         }   
