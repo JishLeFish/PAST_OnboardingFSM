@@ -79,8 +79,6 @@ public class FiniteStateMachine
                     stateFault();
                   break;
             }
-        
-            
         }   
             while(choiceMade != true);
         // switch statement throws error and takes system to FAULT
