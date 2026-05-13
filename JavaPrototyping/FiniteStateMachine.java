@@ -58,7 +58,7 @@ public class FiniteStateMachine
             {
                 case 'l', 'L':
                     stateLowPower();
-
+                    
                 break;
 
                 case 'n', 'N':
@@ -77,11 +77,11 @@ public class FiniteStateMachine
 
     public static void stateLowPower()
     {
-        
+        System.out.println("The System is now in Low Power");
     }
 
     public static void stateNominal()
     {
-
+         System.out.println("The System is now in Nominal");
     }
 }
