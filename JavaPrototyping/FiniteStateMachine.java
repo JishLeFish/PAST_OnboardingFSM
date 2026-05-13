@@ -88,6 +88,9 @@ public class FiniteStateMachine
     public static void stateLowPower()
     {
         System.out.println("The System is now in Low Power");
+        System.out.println("Shutting down subsystems");
+        System.out.println("Looking for any input to wake back up");
+        // call getUserInput to return system to stateIdle()
     }
 
     public static void stateNominal()
