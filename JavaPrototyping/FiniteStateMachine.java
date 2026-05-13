@@ -53,7 +53,7 @@ public class FiniteStateMachine
             System.out.println("If no choice is made in 10 minutes, the System will enter Low Power mode.");
 
             elapsedTime = (new Date()).getTime() - startTime;
-            choice = getUserInput(null)
+            choice = getUserInput(null);
             switch(choice)
             {
                 case 'l', 'L':
