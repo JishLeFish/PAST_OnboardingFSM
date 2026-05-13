@@ -40,15 +40,9 @@ public class FiniteStateMachine
 
     public static void stateIdle()
     {
-        try
-        {
-            char choice = ' '; 
-        }
-        catch(InputMismatchException e)
-        {
-            System.out.println("The System ran into an error getting the input from the user.");
-            stateFault();
-        }
+        char choice = ' '; 
+        
+        
         System.out.println("The System is now in Idle.");
         Boolean choiceMade = false;
         do
@@ -57,7 +51,16 @@ public class FiniteStateMachine
             System.out.println("    > Move to (L)OW_POWER and shut down subsystems.");
             System.out.println("    > Move to (N)OMINAL and activate the Sensors and Payload.");
             System.out.println("If no choice is made in 10 minutes, the System will enter Low Power mode.");
-            choice = getUserCharInput("");
+            
+            try
+            {
+                choice = getUserCharInput("");
+            }
+            catch(InputMismatchException e)
+            {
+            System.out.println("The System ran into an error getting the input from the user.");
+            stateFault();
+            }
             switch(choice)
             {
                 case 'l', 'L':
@@ -82,6 +85,11 @@ public class FiniteStateMachine
 
     public static void stateNominal()
     {
-         System.out.println("The System is now in Nominal");
+        System.out.println("The System is now in Nominal");
+    }
+
+    public static void stateFault()
+    {
+        System.out.println("The System is now in Fault");
     }
 }
