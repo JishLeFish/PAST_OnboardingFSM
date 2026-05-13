@@ -42,7 +42,7 @@ public class FiniteStateMachine
     {
         char choice = ' ';
         System.out.println("The System is now in Idle.");
-
+        Boolean choiceMade = false;
         do
         {
             System.out.println("What do you want the System to do?");
@@ -54,16 +54,16 @@ public class FiniteStateMachine
             {
                 case 'l', 'L':
                     stateLowPower();
-                    
+                    choiceMade = true;
                 break;
 
                 case 'n', 'N':
                     stateNominal();
+                    choiceMade = true;
                 break;
             }
-
         }
-            while(choice == ' ');
+            while(choiceMade != true);
         // switch statement throws error and takes system to FAULT
     }
 
