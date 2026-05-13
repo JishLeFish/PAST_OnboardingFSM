@@ -40,16 +40,28 @@ public class FiniteStateMachine
 
     public static void stateIdle()
     {
-        char choice;
+        char choice = ' ';
         System.out.println("The System is now in Idle.");
+        do
+        {
+            System.out.println("What do you want the System to do?");
+            System.out.println("    > Move to (L)OW_POWER and shut down subsystems.");
+            System.out.println("    > Move to (N)OMINAL and activate the Sensors and Payload.");
+            System.out.println("If no choice is made in 10 minutes, the System will enter Low Power mode.");
 
-        System.out.println("What do you want the System to do?");
-        System.out.println("    > Move to (L)OW_POWER and shut down subsystems.");
-        System.out.println("    > Move to (N)OMINAL and activate the Sensors and Payload.");
-        System.out.println("If no choice is made in 10 minutes, the System will enter Low Power mode.");
-        
-        
+            switch(choice)
+            {
+                case 'l', 'L':
+                    stateLowPower();
 
+                break;
+
+                case 'n', 'N':
+                    stateNominal();
+                break;
+            }
+        }
+            while(choice != ' ');
         // add Switch statement for choice
         // switch statement throws error and takes system to FAULT
         // add Timer somehow??
