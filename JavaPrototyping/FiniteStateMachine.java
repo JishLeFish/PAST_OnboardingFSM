@@ -71,7 +71,7 @@ public class FiniteStateMachine
                 stateLowPower();
             }
         }
-            while(choice != ' ');
+            while(choice == ' ');
         // switch statement throws error and takes system to FAULT
     }
 
