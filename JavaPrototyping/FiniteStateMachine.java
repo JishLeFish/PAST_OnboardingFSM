@@ -42,8 +42,11 @@ public class FiniteStateMachine
     {
         char choice = ' ';
         System.out.println("The System is now in Idle.");
+        long startTime = System.currentTimeMillis();
+        long elapsedTime = 0;
         do
         {
+            elapsedTime = (new Date()).getTime() - startTime;
             System.out.println("What do you want the System to do?");
             System.out.println("    > Move to (L)OW_POWER and shut down subsystems.");
             System.out.println("    > Move to (N)OMINAL and activate the Sensors and Payload.");
@@ -61,7 +64,7 @@ public class FiniteStateMachine
                 break;
             }
         }
-            while(choice != ' ');
+            while(elapsedTime < 20*60*1000);
         // add Switch statement for choice
         // switch statement throws error and takes system to FAULT
         // add Timer somehow??
