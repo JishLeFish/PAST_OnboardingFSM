@@ -61,6 +61,7 @@ public class FiniteStateMachine
             System.out.println("The System ran into an error getting the input from the user.");
             stateFault();
             }
+           
             switch(choice)
             {
                 case 'l', 'L':
@@ -71,9 +72,16 @@ public class FiniteStateMachine
                 case 'n', 'N':
                     stateNominal();
                     choiceMade = true;
-                break;
+                 break;
+
+                default:
+                    System.out.println("The User failed to input an option.");
+                    stateFault();
+                  break;
             }
-        }
+        
+            
+        }   
             while(choiceMade != true);
         // switch statement throws error and takes system to FAULT
     }
