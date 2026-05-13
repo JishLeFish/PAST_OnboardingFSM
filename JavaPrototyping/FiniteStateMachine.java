@@ -52,24 +52,27 @@ public class FiniteStateMachine
             System.out.println("    > Move to (N)OMINAL and activate the Sensors and Payload.");
             System.out.println("If no choice is made in 10 minutes, the System will enter Low Power mode.");
 
-            elapsedTime = (new Date()).getTime() - startTime;
+            
             choice = getUserCharInput("");
-            switch(choice)
+            
+            while(elapsedTime <= 5 * 1000 || choice == ' ')
             {
-                case 'l', 'L':
-                    stateLowPower();
-                    
-                break;
+                elapsedTime = (new Date()).getTime() - startTime;
+                switch(choice)
+                {
+                    case 'l', 'L':
+                        stateLowPower();
+                        
+                    break;
 
-                case 'n', 'N':
-                    stateNominal();
-                break;
+                    case 'n', 'N':
+                        stateNominal();
+                    break;
+                }
             }
-
-            if(elapsedTime >= 20 * 60 * 1000)
-            {
-                stateLowPower();
-            }
+                
+            stateLowPower();
+            
         }
             while(choice == ' ');
         // switch statement throws error and takes system to FAULT
