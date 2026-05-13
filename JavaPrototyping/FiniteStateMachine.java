@@ -101,7 +101,6 @@ public class FiniteStateMachine
             }
         }   
             while(choiceMade != true);
-        // switch statement throws error and takes system to FAULT
     }
 
     public static void stateLowPower()
