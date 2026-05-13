@@ -58,7 +58,7 @@ public class FiniteStateMachine
             }
             catch(InputMismatchException e)
             {
-            System.out.println("The System ran into an error getting the input from the user.");
+            System.out.println("The System ran into an error getting the input from the user in the Idle state.");
             stateFault();
             }
            
@@ -75,7 +75,7 @@ public class FiniteStateMachine
                  break;
 
                 default:
-                    System.out.println("The User failed to input an option.");
+                    System.out.println("The User failed to input an option in the Idle state.");
                     stateFault();
                     choiceMade = true;
                   break;
