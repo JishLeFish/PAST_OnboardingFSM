@@ -34,7 +34,7 @@ public class FiniteStateMachine
     }
 
         public static String getUserStringInput(String prompt) throws InputMismatchException
-    {
+        {
         String input = "";
         try
         {
@@ -46,8 +46,9 @@ public class FiniteStateMachine
             System.out.println("There was an error with getting the User Input String.");
             System.out.println("The error: " + e);
         }
+
         return input;
-    }
+        }
 
     public static void stateBoot()
     {
@@ -58,7 +59,6 @@ public class FiniteStateMachine
     public static void stateIdle()
     {
         char choice = ' '; 
-        
         
         System.out.println("The System is now in Idle.");
         Boolean choiceMade = false;
@@ -75,12 +75,10 @@ public class FiniteStateMachine
             }
             catch(InputMismatchException e)
             {
-            System.out.println("The System ran into an error getting the input from the user in the Idle state.");
-            stateFault();
+                System.out.println("The System ran into an error getting the input from the user in the Idle state.");
+                stateFault();
             }
-           
-
-            
+                       
             switch(choice)
             {
                 case 'l', 'L':
