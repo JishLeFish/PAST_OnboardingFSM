@@ -26,11 +26,14 @@ public class FiniteStateMachine
         }
         catch(InputMismatchException e)
         {
-            System.out.println("There was an error with getting the User Input.");
+            System.out.println("There was an error with getting the User Input for char.");
             System.out.println("The error: " + e);
         }
 
         return input;
+    }
+
+    
     }
     public static void stateBoot()
     {
