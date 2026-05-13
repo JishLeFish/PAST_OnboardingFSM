@@ -40,7 +40,15 @@ public class FiniteStateMachine
 
     public static void stateIdle()
     {
-        char choice = ' ';
+        try
+        {
+            char choice = ' '; 
+        }
+        catch(InputMismatchException e)
+        {
+            System.out.println("The System ran into an error getting the input from the user.");
+            stateFault();
+        }
         System.out.println("The System is now in Idle.");
         Boolean choiceMade = false;
         do
