@@ -16,13 +16,13 @@ public class FiniteStateMachine
         sc.close();
     }
 
-    public static String getUserInput(String prompt) throws InputMismatchException
+    public static char getUserCharInput(String prompt) throws InputMismatchException
     {
-        String input = "";
+        char input = ' ';
         try
         {
             System.out.println(prompt);
-            input = sc.next();
+            input = sc.next().charAt(0);
         }
         catch(InputMismatchException e)
         {
@@ -53,7 +53,7 @@ public class FiniteStateMachine
             System.out.println("If no choice is made in 10 minutes, the System will enter Low Power mode.");
 
             elapsedTime = (new Date()).getTime() - startTime;
-            choice = getUserInput(null);
+            choice = getUserCharInput("");
             switch(choice)
             {
                 case 'l', 'L':
