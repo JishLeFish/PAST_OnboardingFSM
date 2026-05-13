@@ -33,8 +33,22 @@ public class FiniteStateMachine
         return input;
     }
 
-    
+        public static String getUserStringInput(String prompt) throws InputMismatchException
+    {
+        String input = "";
+        try
+        {
+            System.out.println(prompt);
+            input = sc.next();
+        }
+        catch(InputMismatchException e)
+        {
+            System.out.println("There was an error with getting the User Input String.");
+            System.out.println("The error: " + e);
+        }
+        return input;
     }
+
     public static void stateBoot()
     {
         System.out.println("The System is booting.");
@@ -65,6 +79,8 @@ public class FiniteStateMachine
             stateFault();
             }
            
+
+            
             switch(choice)
             {
                 case 'l', 'L':
