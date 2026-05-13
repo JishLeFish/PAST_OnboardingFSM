@@ -42,17 +42,13 @@ public class FiniteStateMachine
     {
         char choice = ' ';
         System.out.println("The System is now in Idle.");
-        long startTime = System.currentTimeMillis();
-        long elapsedTime = 0;
-        
+
         do
         {
             System.out.println("What do you want the System to do?");
             System.out.println("    > Move to (L)OW_POWER and shut down subsystems.");
             System.out.println("    > Move to (N)OMINAL and activate the Sensors and Payload.");
             System.out.println("If no choice is made in 10 minutes, the System will enter Low Power mode.");
-
-            elapsedTime = (new Date()).getTime() - startTime;
             choice = getUserCharInput("");
             switch(choice)
             {
@@ -66,10 +62,6 @@ public class FiniteStateMachine
                 break;
             }
 
-            if(elapsedTime >= 20 * 60 * 1000)
-            {
-                stateLowPower();
-            }
         }
             while(choice == ' ');
         // switch statement throws error and takes system to FAULT
