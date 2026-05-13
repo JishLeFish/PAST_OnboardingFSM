@@ -65,8 +65,16 @@ public class FiniteStateMachine
             }
         }
             while(elapsedTime < 20*60*1000);
-        // add Switch statement for choice
         // switch statement throws error and takes system to FAULT
-        // add Timer somehow??
+    }
+
+    public static void stateLowPower()
+    {
+        
+    }
+
+    public static void stateNominal()
+    {
+        
     }
 }
