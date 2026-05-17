@@ -142,4 +142,8 @@ public class FiniteStateMachine
         stateSafe();
     }
 
+    public static void stateSafe()
+    {
+        System.out.println("The System is now in Safe.");
+    }
 }
