@@ -132,8 +132,16 @@ public class FiniteStateMachine
     public static void stateNominal()
     {
         System.out.println("The System is now in Nominal.");
-        System.out.println("The Payload and Sensors are running.");
-    }
+        try
+        {
+            System.out.println("The Payload and Sensors are running.");
+        }
+        catch(Exception e)
+        {
+            System.out.println("The System ran into an error running its Payload and Sensors.");
+            stateFault();
+        }
+    }   
 
     public static void stateFault()
     {
@@ -156,6 +164,5 @@ public class FiniteStateMachine
             stateFault();
         }
         stateIdle();
-
     }
 }
