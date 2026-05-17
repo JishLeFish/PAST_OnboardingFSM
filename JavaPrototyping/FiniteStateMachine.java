@@ -154,6 +154,7 @@ public class FiniteStateMachine
             System.out.println("The System ran into an error restarting its submodules.");
             stateFault();
         }
-        
+        stateIdle();
+
     }
 }
