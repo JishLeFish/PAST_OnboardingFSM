@@ -52,8 +52,16 @@ public class FiniteStateMachine
 
     public static void stateBoot()
     {
-        System.out.println("The System is booting.");
-        stateIdle();        
+        try
+        {
+            System.out.println("The System is booting.");
+            stateIdle(); 
+        }
+        catch(Exception e)
+        {
+            System.out.println("There was an error during boot.");
+            stateFault();
+        }
     }
 
     public static void stateIdle()
@@ -89,13 +97,13 @@ public class FiniteStateMachine
                 case 'n', 'N':
                     stateNominal();
                     choiceMade = true;
-                 break;
+                break;
 
                 default:
                     System.out.println("The User failed to input an option in the Idle state.");
                     stateFault();
                     choiceMade = true;
-                  break;
+                break;
             }
         }   
             while(choiceMade != true);
@@ -107,10 +115,21 @@ public class FiniteStateMachine
         System.out.println("The System is now in Low Power");
         System.out.println("Shutting down subsystems");
         System.out.println("Looking for any input to wake back up");
-
+        
+        try
+        {
         wakeInput = getUserStringInput("");
         System.out.println("Bringing subsystems back online");
+        }
+        catch(InputMismatchException e)
+        {
+            System.out.println("There was an error getting the user input to wake The System.");
+            stateFault();
+        }
         stateIdle();
+        
+        
+
     }
 
     public static void stateNominal()
