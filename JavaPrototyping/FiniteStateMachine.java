@@ -141,6 +141,9 @@ public class FiniteStateMachine
             System.out.println("The System ran into an error running its Payload and Sensors.");
             stateFault();
         }
+        System.out.println("The System has finished running its Payload and Sensors.");
+        System.out.println("The System is returning to IDLE.");
+        stateIdle();
     }   
 
     public static void stateFault()
