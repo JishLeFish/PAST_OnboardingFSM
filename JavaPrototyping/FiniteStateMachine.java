@@ -127,9 +127,6 @@ public class FiniteStateMachine
             stateFault();
         }
         stateIdle();
-        
-        
-
     }
 
     public static void stateNominal()
@@ -140,5 +137,9 @@ public class FiniteStateMachine
     public static void stateFault()
     {
         System.out.println("The System is now in Fault");
+        System.out.println("Unneeded submodules have been shut down to prevent further errors.");
+        System.out.println("The System will now try to move to SAFE.");
+        stateSafe();
     }
+
 }
