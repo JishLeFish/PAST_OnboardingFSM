@@ -145,5 +145,15 @@ public class FiniteStateMachine
     public static void stateSafe()
     {
         System.out.println("The System is now in Safe.");
+        try
+        {
+            System.out.println("All submodules have been restarted.");
+        }
+        catch(Exception e)
+        {
+            System.out.println("The System ran into an error restarting its submodules.");
+            stateFault();
+        }
+        
     }
 }
