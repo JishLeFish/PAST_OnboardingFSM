@@ -112,14 +112,14 @@ public class FiniteStateMachine
     public static void stateLowPower()
     {
         String wakeInput = "";
-        System.out.println("The System is now in Low Power");
-        System.out.println("Shutting down subsystems");
-        System.out.println("Looking for any input to wake back up");
+        System.out.println("The System is now in Low Power.");
+        System.out.println("Shutting down subsystems.");
+        System.out.println("Looking for any input to wake back up.");
         
         try
         {
         wakeInput = getUserStringInput("");
-        System.out.println("Bringing subsystems back online");
+        System.out.println("Bringing subsystems back online.");
         }
         catch(InputMismatchException e)
         {
@@ -131,12 +131,12 @@ public class FiniteStateMachine
 
     public static void stateNominal()
     {
-        System.out.println("The System is now in Nominal");
+        System.out.println("The System is now in Nominal.");
     }
 
     public static void stateFault()
     {
-        System.out.println("The System is now in Fault");
+        System.out.println("The System is now in Fault.");
         System.out.println("Unneeded submodules have been shut down to prevent further errors.");
         System.out.println("The System will now try to move to SAFE.");
         stateSafe();
